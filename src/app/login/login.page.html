@@ -1,0 +1,24 @@
+<ion-content padding>
+  <form #form="ngForm" (ngSubmit)="login(form)">
+    <ion-grid>
+      <ion-row padding >
+        <ion-col style="margin:auto; text-align: center" align-self-center size-md="6" size-lg="5" size-xs="12">
+          <div >
+            <img style="margin: 20px 0;" src="assets/img/11-03.jpg" alt="Hello">
+          </div>
+          <div padding style="border: 2px solid var(--ion-color-medium); border-radius: 5px;" >
+            <ion-item>
+              <ion-input name="email" type="email" placeholder="seu@email.com" ngModel required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input name="password" type="password" placeholder="Senha" ngModel required></ion-input>
+            </ion-item>
+          </div>
+          <div style="margin: 20px 0;" padding>
+            <ion-button href="/home/tabs/tab1" size="large"  [disabled]="form.invalid" expand="block">Login</ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>
